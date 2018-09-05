@@ -21,7 +21,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header" style={this.header}>
           
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">TODO LIST</h1>
           <NavLink exact to="/" activeStyle={this.active}>
           Home
         </NavLink>

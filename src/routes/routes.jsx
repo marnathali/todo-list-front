@@ -5,7 +5,7 @@ import {Route} from 'react-router-dom';
 //COMPONENTS
 import App from '../containers/App.js';
 import TodoList from '../containers/TodoList.jsx';
-import CreateTodo from '../containers/CreateTodo.jsx';
+import FormTodo from '../containers/FormTodo.jsx';
 
 
 
@@ -17,7 +17,7 @@ class TodoListRoutes extends React.Component{
          <App />     
         
         <Route path='/todo-list' component={TodoList} />
-        <Route path='/create-todo' component={CreateTodo} />
+        <Route path='/create-todo' component={FormTodo} />
        
 
       </React.Fragment>

@@ -12,10 +12,10 @@ class Task extends Component{
            <h2>{this.props.title}</h2>
            <ul>
               {this.props.todoItems.map( item=>{
-              	const{content, todoId}= item;
+              	const{content, id}= item;
               
               return <ItemTodo
-                        key= {todoId}
+                        key= {id}
                         content= {content}
                         />
               })
