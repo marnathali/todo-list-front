@@ -4,6 +4,7 @@ import '../style/index.css';
 
 import axios from 'axios';
 
+
 class FormTodo extends Component {
 
  constructor (props){
@@ -79,17 +80,60 @@ class FormTodo extends Component {
 		}
 
 
+	Form = {
+  display: "flex",
+  justifyContent: "flex-start",
+  alignItems: "stretch",
+  flexDirection: "row",
+  padding: 10
+}
+
+Input={
+  width: 150,
+  padding: 2,
+  margin: 5,
+  boxSizing: "border-box",
+  borderColor: "dodgerBlue",
+  borderRadius: 4,
+  backgroundColor: "ghostWhite",
+  color: "midnightBlue"
+}
+
+Button={
+
+  backgroundColor: "gray",
+  color: "white",
+  fontSize: 12,
+  padding: 4,
+  margin: 4,
+  borderRadius: 4,
+  border: "none",
+  width: 80,
+  float: "left"
+}
+Label={
+color: "midnightBlue",
+textAlign: "left",
+fontSize: 15
+}
+
+container={
+  borderBottom: "solid",
+  color:"gray"
+}
+
    render() {
-    //var value = this.state.value;
+
     return (
-        <div>
-        <form className="Form" onSubmit={this.handleSubmit}>
-          <label>
-            Task title:
-            <input className="Input" type="text" value={this.state.title}  name="title" id="title" onChange={this.handleChange} placeholder="input the task title" />
-          </label>
-          <button className="Button" type="submit">Add Task</button>
-          <button className="Button" type="button" onClick={this.handleCancel}>Cancel</button>
+        <div style={this.container}>
+        <form style={this.Form} onSubmit={this.handleSubmit}>
+         
+          
+            <label style={this.Label}>Task title:
+            <input style={this.Input}  type="text" value={this.state.title}  name="title" id="title" placeholder="input the task title" onChange={this.handleChange}  />
+             </label>
+          <button style={this.Button} type="submit">Add Task</button>
+          <button style={this.Button} type="button" onClick={this.handleCancel}>Cancel</button>
         </form>
       </div>
     );

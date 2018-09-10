@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from "react-router-dom";
+//import { NavLink } from "react-router-dom";
 
 import '../style/App.css';
 
@@ -16,16 +16,17 @@ class Header extends Component {
     listStyle: "none"
   };
 
+  App={
+    textAlign: "center"
+  }
+
   render() {
     return (
-      <div className="App">
+      <div style={this.App}>
         <header className="App-header" style={this.header}>
           
           <h1 className="App-title">TODO LIST</h1>
-          <NavLink exact to="/" activeStyle={this.active}>
-          Home
-        </NavLink>
-        
+                
         </header>
       </div>
     );
@@ -33,3 +34,8 @@ class Header extends Component {
 }
 
 export default Header;
+
+
+/*<NavLink exact to="/" activeStyle={this.active}>
+          Home
+        </NavLink>*/

@@ -35,12 +35,26 @@ class Task extends Component{
   }
 
 
+List={
+
+  display:"flex",
+  flexWrap: "wrap",
+  listStyleType: "square",
+  listStylePosition: "inside",
+  color: "royalBlue",
+  fontSize: 10
+}
+Hr={
+  color: "skyBlue"
+
+}
+
 	render(){
 		return(
-			<div>
+			<div >
            <input type="radio" onChange={this.handleDelete}/>     
-           <h4>{this.props.title}</h4>
-           <ul>
+           <small>{this.props.title}</small><hr style={this.Hr} />
+           <ul style={this.List}>
               {this.props.todoItems.map( item=>{
               	const{content, id}= item;
               

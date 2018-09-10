@@ -6,51 +6,8 @@ import Task from '../components/Task.jsx';
 
 class TaskList extends Component {
   
- // constructor (props){
-  //	super(props);
-
-/*estado inicial todoList= arreglo vacio, 
-loading indica si la lista esta disponible*/
-  	/*this.state={
-  		todoList: [],
-  		loading : true,
-
-  	};*/
-
-    //this.handleActualizar = this.handleActualizar.bind(this);
-  //}
-
   
-  /*Una vez que el componente se ha montado
-  invocamos la funcion para llenar la lista.
-  */
-/*  
-  componentDidMount(){
-  	getTodos()
-  	  .then((res)=>{
-  	  	this.setState({
-  	  		todoList: res.data,
-  	  		loading: false,
-  	  	});
-  	  	console.log(res)
-
-  	  })
-  	  .catch((err)=> console.log(err));
-  }
-
-  handleActualizar(){
-     getTodos()
-       .then((res)=>{
-         this.setState({
-          todoList: res.data,
-          loading: false,
-         });
-         console.log('funciona handleActualizar'+res)
-       })
-  }
-*/
-
-/*itera por cada elemento de la lista y lo convierte en una lista de
+  /*itera por cada elemento de la lista y lo convierte en una lista de
 componentes Todo*/
   renderTodos = ()=>{
     const {todoList} = this.props;
@@ -69,7 +26,8 @@ componentes Todo*/
             onUpdate={this.props.onUpdate}
           />
 
-         
+         //en AppTodo podemos ver la prop onUpdate que le hemos pasado
+         // y por esa razon aca podemos usarla
        
     		);
     });
@@ -81,7 +39,9 @@ componentes Todo*/
   flexDirection: "column",
   justifyContent: "center",
   flexWrap: "wrap",
-  paddingLeft: 25
+  paddingLeft: 10,
+  color: "dimGray"
+
   };
 
 
@@ -90,7 +50,7 @@ componentes Todo*/
   	const {loading} = this.props;
     return (
     	<div style={this.container}>
-      <h2>Todo List: </h2>
+      <h4>Todo List: </h4>
       <React.Fragment>
         {loading ? 'loading...': this.renderTodos()}
         

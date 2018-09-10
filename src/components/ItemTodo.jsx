@@ -3,11 +3,17 @@ import React, { Component } from "react";
 
 class ItemTodo extends Component{
 
+
+Li={
+	display: "inline",
+	paddingLeft: 6
+}
+
 render(){
   return (
 
-  	<li>
-  	  <small>| {this.props.content} </small>
+  	<li style={this.Li}>
+  	  <span>| {this.props.content}</span>
   	</li>
 );
 
