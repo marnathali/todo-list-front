@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import '../style/App.css';
 
-class App extends Component {
+class Header extends Component {
 
   active = {
     fontWeight: "bold",
@@ -25,16 +25,11 @@ class App extends Component {
           <NavLink exact to="/" activeStyle={this.active}>
           Home
         </NavLink>
-        <NavLink exact to="/todo-list" activeStyle={this.active}>
-          Lista de tareas
-        </NavLink>
-        <NavLink exact to="/create-todo" activeStyle={this.active}>
-          Crea una tarea
-        </NavLink>
+        
         </header>
       </div>
     );
   }
 }
 
-export default App;
+export default Header;

@@ -42,8 +42,11 @@ border-radius: 50px; /*bordes redondos*/
 }
 
 .Form{
-	 width: 400px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: row;
+	width: 400px;
   border: 2px solid #333;
   padding: 10px 20px;
-  margin: auto;
 }

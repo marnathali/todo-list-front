@@ -26,7 +26,8 @@ class FormTodo extends Component {
   	console.log('el target'+event.target);
   	console.log('el value'+event.target.value);
 
-  	this.setState ({ title: event.target.value});
+
+  	this.setState ({ title: event.target.value.toUpperCase()});
   	
 	console.log('el state'+this.state.title);		
             
@@ -37,7 +38,10 @@ class FormTodo extends Component {
 			event.preventDefault();
             //actualiza el state en un par clave: valor en concordancia con
             //el name del input
-			this.setState({
+
+            if(document.getElementById('title').value !== ""){
+
+            	this.setState({
 				title: event.target.value,
 			});
 
@@ -51,6 +55,7 @@ class FormTodo extends Component {
 				console.log(res, ' title added');
 				console.log(res.data);
 				alert('A title was submited: ' + this.state.title);
+				this.props.onUpdate();
 			})
 			.catch(function (error){
 				console.log(error, ' TRY AGAIN');
@@ -61,10 +66,15 @@ class FormTodo extends Component {
 				title: "",
 			})
 
+            } else {
+            	alert('Por favor ingrese una tarea antes!');
+            }
+			
 		}
 
 		handleCancel(){
 			document.getElementById("title").value="";
+			alert('ud cancelo la operacion');
 
 		}
 

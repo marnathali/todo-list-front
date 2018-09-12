@@ -7,7 +7,7 @@ render(){
   return (
 
   	<li>
-  	  <strong>{this.props.content}</strong>
+  	  <small>| {this.props.content} </small>
   	</li>
 );
 
